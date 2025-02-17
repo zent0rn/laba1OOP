@@ -1,0 +1,10 @@
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.csproj.AssemblyReference.cache
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.Form1.resources
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.Properties.Resources.resources
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.csproj.GenerateResource.cache
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.csproj.CoreCompileInputs.cache
+E:\fromGit\OOP_labs\bin\Debug\OOP_labs.exe.config
+E:\fromGit\OOP_labs\bin\Debug\OOP_labs.exe
+E:\fromGit\OOP_labs\bin\Debug\OOP_labs.pdb
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.exe
+E:\fromGit\OOP_labs\obj\Debug\OOP_labs.pdb
