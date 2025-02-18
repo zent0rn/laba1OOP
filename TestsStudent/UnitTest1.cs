@@ -79,9 +79,9 @@ namespace TestsStudent
             int graduationYear = 2027;
             int numbOfAbsent = 33;
 
-            string expected = $"Студент {name} №1.\n" +
+            string expected = $"Студент {name}.\n" +
                 $"Университет: {university}, факультет: {faculty}, кафедра: {department}, форма обучения: {educationForm.ToString()}.\n" +
-                $"Год выпуска: {graduationYear}, средний балл: {averageScore}, количество прогулов: {numbOfAbsent}";
+                $"Год выпуска: {graduationYear}, средний балл: {averageScore}, количество прогулов: {numbOfAbsent}\n";
 
             Student student = new Student(university, faculty, department, educationForm,
              name, averageScore, graduationYear, numbOfAbsent);
@@ -110,9 +110,5 @@ namespace TestsStudent
 
             Assert.AreEqual(student.getYearOfGraduationInHex(), expected);
         }
-
-        
-
-
     }
 }

@@ -266,7 +266,6 @@
             this.studentTable.Size = new System.Drawing.Size(259, 106);
             this.studentTable.TabIndex = 1;
             this.studentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentTable_CellClick);
-            this.studentTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentTable_CellContentClick);
             // 
             // StudentNumber
             // 
@@ -356,7 +355,6 @@
             this.infoTextbox.Size = new System.Drawing.Size(363, 105);
             this.infoTextbox.TabIndex = 0;
             this.infoTextbox.Text = "";
-            this.infoTextbox.TextChanged += new System.EventHandler(this.infoTextbox_TextChanged);
             // 
             // button3
             // 
@@ -455,7 +453,6 @@
             this.label11.Size = new System.Drawing.Size(115, 13);
             this.label11.TabIndex = 14;
             this.label11.Text = "Количество прогулов";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // numbOfAbsentTextbox
             // 

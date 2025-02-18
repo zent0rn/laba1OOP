@@ -148,22 +148,16 @@ namespace OOP_labs.src
             
         }
 
-
-
-        
-
         /// <summary>
         /// Метод для вывода всех данных о студенте
         /// </summary>
         /// <returns>Строка с данными о студенте</returns>
         public override string ToString()
         {
-            return $"Студент {Name} №{ObjectCounter}.\n" +
+            return $"Студент {Name}.\n" +
                 $"Университет: {University}, факультет: {Faculty}, кафедра: {Department}, форма обучения: {EduForm.ToString()}.\n" +
-                $"Год выпуска: {YearOfGraduation}, средний балл: {AverageScore}, количество прогулов: {NumbOfAbsent}";
+                $"Год выпуска: {YearOfGraduation}, средний балл: {AverageScore}, количество прогулов: {NumbOfAbsent}\n";
         }
-
-        
 
         /// <summary>
         /// Метод для вывода год выпуска студента в шеснадцатеричной форме

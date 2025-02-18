@@ -31,21 +31,40 @@ namespace OOP_labs
             double averageScore = averageScoreTextbox.Text.Length == 0 ? 0.0: double.Parse(averageScoreTextbox.Text);
             int graduationYear = graduationYearTextbox.Text.Length == 0 ? 0 : int.Parse(graduationYearTextbox.Text);
             int numbOfAbsent = numbOfAbsentTextbox.Text.Length == 0 ? 0 : int.Parse(numbOfAbsentTextbox.Text);
-
-            if (!string.IsNullOrEmpty(university) && !string.IsNullOrEmpty(faculty)
+            try
+            {
+                if (!string.IsNullOrEmpty(university) && !string.IsNullOrEmpty(faculty)
                 && !string.IsNullOrEmpty(department) && educationForm != EducationForm.Undefined &&
-                averageScore != 0 && graduationYear != 0) {
-                try
+                averageScore != 0 && graduationYear != 0)
                 {
+
                     Student student = new Student(university, faculty, department, educationForm, studentName, averageScore, graduationYear, numbOfAbsent);
                     students.Add(student);
                     showMessage("Студент " + studentName + " создан\n");
-                }
-                catch (TooManyObjectsException ex) {
-                    Win32.MessageBox(0, ex.Message + "\nЛимит: " + ex.Limit + " объектов", "Ошибка", 0);
-                }
-                   
 
+
+                }
+                else if (!string.IsNullOrEmpty(university) && !string.IsNullOrEmpty(studentName))
+                {
+                    Student student = new Student(studentName, university);
+                    students.Add(student);
+                    showMessage("Студент " + studentName + " создан\n");
+                }
+                else if (!string.IsNullOrEmpty(studentName))
+                {
+                    Student student = new Student(studentName);
+                    students.Add(student);
+                    showMessage("Студент " + studentName + " создан\n");
+                }
+                else {
+                    Student student = new Student();
+                    students.Add(student);
+                    showMessage("Студент с ID " + student.Id + " создан\n");
+                }
+            }
+            catch (TooManyObjectsException ex)
+            {
+                Win32.MessageBox(0, ex.Message + "\nЛимит: " + ex.Limit + " объектов", "Ошибка", 0);
             }
             updateStudentsTable();
         }
@@ -122,11 +141,6 @@ namespace OOP_labs
             editStudentButton.Enabled = false;
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             if (currentStudent == null)
@@ -136,17 +150,6 @@ namespace OOP_labs
 
             showMessage(currentStudent.ToString());
         }
-
-        private void infoTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void studentTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
             if (currentStudent == null)
@@ -230,7 +233,7 @@ namespace OOP_labs
         private void Form1_Load(object sender, EventArgs e)
         {
             showMessage("Лабораторная работа #1: Класс. Статические члены класса. Обработка исключений.\n" +
-                "Группа 23ВП1, состав бригады: Сазонов А. Н., Зимин Е. А.");
+                "Группа 23ВП1, состав бригады: Сазонов А. Н., Зимин Е. А.\n");
         }
     }
 }

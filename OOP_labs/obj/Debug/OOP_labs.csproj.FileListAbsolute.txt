@@ -8,3 +8,13 @@ E:\fromGit\OOP_labs\bin\Debug\OOP_labs.exe
 E:\fromGit\OOP_labs\bin\Debug\OOP_labs.pdb
 E:\fromGit\OOP_labs\obj\Debug\OOP_labs.exe
 E:\fromGit\OOP_labs\obj\Debug\OOP_labs.pdb
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\bin\Debug\OOP_labs.exe.config
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\bin\Debug\OOP_labs.exe
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\bin\Debug\OOP_labs.pdb
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.csproj.AssemblyReference.cache
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.Form1.resources
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.Properties.Resources.resources
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.csproj.GenerateResource.cache
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.csproj.CoreCompileInputs.cache
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.exe
+C:\Users\Алексей\Desktop\учеба\4 семестр\ООП\Лабы\1\laba1OOP\OOP_labs\obj\Debug\OOP_labs.pdb
