@@ -9,60 +9,97 @@ namespace OOP_labs.src
     public class Student
     {
         private static long _objectCounter = 0;
+        /// <summary>
+        /// Количество созданных объектов
+        /// </summary>
         public static long ObjectCounter { 
             get { return _objectCounter; }
         }
 
+        /// <summary>
+        /// Максимальное число объектов
+        /// </summary>
+        /// <remarks>
+        /// 7 - просто пример
+        /// </remarks>
         private static int MEMORY_LIMIT = 7;
 
         private long _id;
+        /// <summary>
+        /// Уникальное число - идентификатор объекта
+        /// </summary>
         public long Id {
             get => _id;
         }
 
         private string _university;
+
+        /// <summary>
+        /// Университет, в котором обучается студент
+        /// </summary>
         public string University {
             get => _university;
             set => _university = value;
         }
 
         private string _faculty;
+        /// <summary>
+        /// Факультет, на котором обучается студент
+        /// </summary>
         public string Faculty {
             get => _faculty;
             set => _faculty = value;
         }
 
         private string _department;
+        /// <summary>
+        /// Кафедра, на которой обучается студент
+        /// </summary>
         public string Department {
             get => _department;
             set => _department = value;
         }
 
         private EducationForm _educationForm;
+        /// <summary>
+        /// Форма обучения: очно, очно-заочно, заочно
+        /// </summary>
         public EducationForm EduForm {
             get => _educationForm;
             set => _educationForm = value;
         }
 
         private string _name;
+        /// <summary>
+        /// Имя студента
+        /// </summary>
         public string Name {
             get => _name;
             set => _name = value;
         }
 
         private double _averageScore;
+        /// <summary>
+        /// Средний балл студента
+        /// </summary>
         public double AverageScore {
             get => _averageScore;
             set => _averageScore = value;
         }
 
         private int _yearOfGraduation;
+        /// <summary>
+        /// Год выпуска студента
+        /// </summary>
         public int YearOfGraduation {
             get => _yearOfGraduation;
             set => _yearOfGraduation = value;
         }
 
         private int _numbOfAbsent;
+        /// <summary>
+        /// Количество пропусков студента
+        /// </summary>
         public int NumbOfAbsent
         {
             get => _numbOfAbsent;
@@ -82,13 +119,15 @@ namespace OOP_labs.src
         /// <param name="averageScore">Средний балл студента</param>
         /// <param name="graduationYear">Год выпуска студента</param>
         /// <param name="numbOfAbsent">Количество пропусков студента</param>
-        /// <exception cref="TooManyObjectsException">Исключение при превышении максимального числа объектов класса</exception>
+        /// <exception cref="TooManyObjectsException">
+        /// Исключение при превышении максимального числа объектов класса
+        /// </exception>
         public Student(
             string university, string faculty, string department, EducationForm educationForm, 
             string name, double averageScore, int graduationYear, int numbOfAbsent
         ) 
         {
-            if (ObjectCounter + 1 == MEMORY_LIMIT) { 
+            if (ObjectCounter == MEMORY_LIMIT) { 
                 throw new TooManyObjectsException("Превышено максимальное количество объектов", MEMORY_LIMIT);
             }
             _id = ++_objectCounter;
@@ -105,10 +144,12 @@ namespace OOP_labs.src
         /// <summary>
         /// Конструктор без параметров
         /// </summary>
-        /// <exception cref="TooManyObjectsException">Исключение при превышении максимального числа объектов класса</exception>
+        /// <exception cref="TooManyObjectsException">
+        /// Исключение при превышении максимального числа объектов класса
+        /// </exception>
         public Student()
         {
-            if (ObjectCounter + 1 == MEMORY_LIMIT)
+            if (ObjectCounter == MEMORY_LIMIT)
             {
                 throw new TooManyObjectsException("Превышено максимальное количество объектов", MEMORY_LIMIT);
             }
@@ -119,10 +160,12 @@ namespace OOP_labs.src
         /// Конструктор с одним параметром
         /// </summary>
         /// <param name="university">Университет студента</param>
-        /// <exception cref="TooManyObjectsException">Исключение при превышении максимального числа объектов класса</exception>
+        /// <exception cref="TooManyObjectsException">
+        /// Исключение при превышении максимального числа объектов класса
+        /// </exception>
         public Student(string name)
         {
-            if (ObjectCounter + 1 == MEMORY_LIMIT)
+            if (ObjectCounter == MEMORY_LIMIT)
             {
                 throw new TooManyObjectsException("Превышено максимальное количество объектов", MEMORY_LIMIT);
             }
@@ -135,10 +178,12 @@ namespace OOP_labs.src
         /// </summary>
         /// <param name="name">Имя студента</param>
         /// <param name="university">Университет студента</param>
-        /// <exception cref="TooManyObjectsException">Исключение при превышении максимального числа объектов класса</exception>
+        /// <exception cref="TooManyObjectsException">
+        /// Исключение при превышении максимального числа объектов класса
+        /// </exception>
         public Student(string name, string university)
         {
-            if (ObjectCounter + 1 == MEMORY_LIMIT)
+            if (ObjectCounter == MEMORY_LIMIT)
             {
                 throw new TooManyObjectsException("Превышено максимальное количество объектов", MEMORY_LIMIT);
             }
@@ -243,7 +288,9 @@ namespace OOP_labs.src
 
 
     }
-
+    /// <summary>
+    /// Форма обучения: очно, очно-заочно, 
+    /// </summary>
     public enum EducationForm {
         Undefined = -1,
         FullTimeEducation,
